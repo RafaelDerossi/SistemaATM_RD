@@ -4,7 +4,6 @@ namespace SistemaATM.Domain.Interfaces.Servicos
 {
    public interface IServicoATM
     {
-        public ATM LigarATM();
-        
+        public void LigarATM();
     }
 }

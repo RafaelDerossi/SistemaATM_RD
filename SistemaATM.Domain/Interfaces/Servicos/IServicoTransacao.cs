@@ -9,7 +9,9 @@ namespace SistemaATM.Domain.Interfaces.Servicos
     {
         public int NumeroDaConta { get; set; }
 
-        public IServicoTela ServicoTela{ get; set; }        
+        public IServicoTela ServicoTela{ get; set; }
+
+        public IServicoBancoDeDadosDoBanco ServicoBancoDeDadosDoBanco { get; set; }
 
         public void Executar();
     }

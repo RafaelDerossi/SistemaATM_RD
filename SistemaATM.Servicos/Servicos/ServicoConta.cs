@@ -32,9 +32,7 @@ namespace SistemaATM.Servicos.Servicos
         {
             var repConta = new RepositorioConta();
             repConta.Creditar(conta, valor);
-        }
-
-         
+        }        
 
     }
 }

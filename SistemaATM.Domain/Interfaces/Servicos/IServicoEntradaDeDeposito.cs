@@ -6,6 +6,6 @@ namespace SistemaATM.Domain.Interfaces.Servicos
 {
    public interface IServicoEntradaDeDeposito
     {
-        public bool EnvelopeDeDepositoRecebido();
+        public bool EnvelopeDeDepositoRecebido(IServicoTela servicoTela);
     }
 }

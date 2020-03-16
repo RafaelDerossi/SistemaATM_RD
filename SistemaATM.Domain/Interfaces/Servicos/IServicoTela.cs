@@ -12,11 +12,7 @@ namespace SistemaATM.Domain.Interfaces.Servicos
 
         public void MostrarMensagemLinhaEspera(string mensagem);
 
-        public void MostrarValorEmReais(string mensagem);
-
-        public void MostrarMenu();
-
-        public void MostrarMenuDeValores();
+        public void MostrarValorEmReais(string mensagem);        
 
         public void LimparTela();
 

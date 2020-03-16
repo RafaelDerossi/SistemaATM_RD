@@ -85,6 +85,7 @@ namespace SistemaATM.Servicos.Servicos
             }            
             
         }
+
         public void Sacar(int numeroDaConta, decimal valor)
         {
             var saldo = ConsultarSaldo(numeroDaConta);

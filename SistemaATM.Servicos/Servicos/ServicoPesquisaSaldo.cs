@@ -10,11 +10,25 @@ namespace SistemaATM.Servicos.Servicos
     {
         public int NumeroDaConta { get; set; }
 
-        public IServicoTela ServicoTela { get; set; }       
+        public IServicoTela ServicoTela { get; set; }
+
+        public IServicoBancoDeDadosDoBanco ServicoBancoDeDadosDoBanco { get; set; }
+
+        public ServicoPesquisaSaldo(int numeroDaConta)
+        {
+            NumeroDaConta = numeroDaConta;
+            ServicoTela = new ServicoTela();                        
+            ServicoBancoDeDadosDoBanco = new ServicoBancoDeDadosDoBanco();
+        }
+        
 
         public void Executar()
         {
-            throw new NotImplementedException();
+            var saldo = ServicoBancoDeDadosDoBanco.ConsultarSaldo(NumeroDaConta);
+            ServicoTela.MostrarMensagemLinha("");
+            ServicoTela.MostrarMensagem("Seu saldo é de ");
+            ServicoTela.MostrarValorEmReais(saldo.ToString());
+            ServicoTela.MostrarMensagemLinhaEspera("");
         }
 
     }
